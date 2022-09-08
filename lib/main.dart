@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:mi_card/job_card.dart';
-import 'package:mi_card/job_page.dart';
+import 'package:mi_card/job_details_page.dart';
 
 void main() => runApp(const MyApp());
 
@@ -14,12 +14,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        
+        primarySwatch: Colors.blue
       ),
-      // initialRoute: '',
-      // routes: {
-
-      // },
+      initialRoute: DetailsPage.id,
+      routes: {
+        DetailsPage.id:(context) => DetailsPage(),
+        JobCard.id: (context) => JobCard(),  
+       },
       home: DetailsPage()
     );
   }

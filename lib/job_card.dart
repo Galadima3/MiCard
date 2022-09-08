@@ -1,12 +1,17 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:mi_card/ScreenData.dart';
 
 class JobCard extends StatelessWidget {
+  static const id = 'JobCard_page';
   const JobCard({Key? key}) : super(key: key);
+
+  
 
   @override
   Widget build(BuildContext context) {
+    var ScreenData = ModalRoute.of(context)!.settings.arguments as JobArguments;
     return Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
@@ -18,7 +23,7 @@ class JobCard extends StatelessWidget {
                 backgroundImage: AssetImage('lib/images/girl.jpg'),
               ),
               Text(
-                'Jessica Mylez',
+                ScreenData.name,
                 style: TextStyle(
                     fontFamily: 'Pacifico',
                     fontSize: 30,
@@ -33,7 +38,7 @@ class JobCard extends StatelessWidget {
                 ),
               ),
               Text(
-                'FLUTTER DEVELOPER',
+                ScreenData.jobTitle,
                 style: TextStyle(
                   fontFamily: 'SourceSansPro',
                   fontSize: 20,
@@ -50,7 +55,7 @@ class JobCard extends StatelessWidget {
                     color: Colors.teal,
                   ),
                   title: Text(
-                    '+234 81 081 30598',
+                    ScreenData.phoneNumber,
                     style: TextStyle(
                       color: Colors.teal,
                       fontFamily: 'SourceSansPro',
@@ -68,7 +73,7 @@ class JobCard extends StatelessWidget {
                     color: Colors.teal,
                   ),
                   title: Text(
-                    'jessy@hotmail.com',
+                    ScreenData.email,
                     style: TextStyle(
                       color: Colors.teal,
                       fontFamily: 'SourceSansPro',
