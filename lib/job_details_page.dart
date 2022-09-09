@@ -39,19 +39,7 @@ class _DetailsPageState extends State<DetailsPage> {
         
         style: AdaptiveStyle.iOS,
       );
-      // showDialog(
-      //   context: context,
-      //   builder: (context) => AlertDialog(
-      //     title: Text('Error'),
-      //     content: Text('One or more fields has been left empty'),
-      //     actions: [
-      //       ElevatedButton(
-      //         onPressed: Navigator.of(context).pop,
-      //         child: Text('Cancel'),
-      //       )
-      //     ],
-      //   ),
-      // );
+      
     } else {
       Navigator.pushNamed(context, JobCard.id,
           arguments: JobArguments(
